@@ -31,6 +31,18 @@ void main() {
   // const dùng khi compile (giá trị không thay đổi tăng hiệu năng xử lý)
  int number1 =5 ;
  int number2 =-5;
-// 5+ -4 +-5 -6  -4 + 5
+  int result = number1 ++  - --number2 +  ++ number2 -  -- number1 +  -- number1 +  ++ number1;
+                       // 5 - --number2 + ++ number2 - --number1 + --number1 + ++ number1;
+// 5 - --number2 + ++ number2 - --number1 + --number1 + ++ number1; number1 = 6, number2 = -5
+  // 5 - (-6) + ++ number2 - --number1 + --number1 + ++ number1; number1 = 6, number2 = -6
+  // 5 - (-6) + (-5) - --number1 + --number1 + ++ number1; number1 = 6, number2 = -5
+  // 5 - (-6) + (-5) - 5 + --number1 + ++ number1; number1 = 5, number2 = -5
+  // 5 - (-6) + (-5) - 5 + 4 + ++ number1; number1 = 4, number2 = -5
+  // 5 - (-6) + (-5) - 5 + 4 + 5; number1 = 5, number2 = -5
+  // 5 + 6 - 5 - 5 + 4 + 5
+  // 10
+ print("number1: "'$number1');
+  print("number2: "'$number2');
+  print ("result = "  '$result') ;
 
 }
